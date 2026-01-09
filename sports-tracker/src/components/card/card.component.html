@@ -1,3 +1,13 @@
-<div class="card">
-  Card Content
-</div>
+@for (team of teamData; track team.teamName){
+  <div class="card">
+    <div class="container-padding logo-adjustments">
+      <img src="{{team.teamLogo}}" alt="broncos-logo" class="logo">
+    </div>
+    <h1>
+      {{ team.teamName }}
+    </h1>
+    <div class="container-padding">
+      {{ team.recentScore }}
+    </div>
+  </div>
+}
